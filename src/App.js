@@ -1,4 +1,5 @@
 import './css/App.css';
+import Map from './components/Map';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
           Fungus Friends!
         </p>
       </header>
+      <Map />
     </div>
   );
 }

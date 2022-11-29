@@ -5,9 +5,9 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-          Fungus Friends!
-        </p>
+        <h1>
+          Fungus Friends! <img src="/images/logo_outline_64.png" alt="Fungus Friends logo" />
+        </h1>
       </header>
       <Map />
     </div>

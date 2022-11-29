@@ -8,24 +8,23 @@ class Map extends React.Component {
     return (
       <>
         <h2>Fungus Map</h2>
-        <p>Here comes a map!</p>
         <MapContainer center={[52.08, 5.235]} zoom={16} >
-        <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <Marker
-          position={[52.081182, 5.237143]}
-          icon={new Icon({
-            iconUrl: markerIconPng,
-            iconSize: [25, 41],
-            iconAnchor: [12, 41]
-          })}
-        >
-          <Popup>
-            Here lives the vibrant chandrasekhar
-          </Popup>
-        </Marker>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          />
+          <Marker
+            position={[52.081182, 5.237143]}
+            icon={new Icon({
+              iconUrl: markerIconPng,
+              iconSize: [25, 41],
+              iconAnchor: [12, 41]
+            })}
+          >
+            <Popup>
+              Here lives the vibrant chandrasekhar
+            </Popup>
+          </Marker>
         </MapContainer>
       </>
     )

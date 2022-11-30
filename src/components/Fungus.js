@@ -7,7 +7,7 @@ class Fungus extends React.Component {
   render () {
     return (
       <Marker
-        position={[52.081182, 5.237143]}
+        position={this.props.fungus.latlng}
         icon={new Icon({
           iconUrl: markerIconPng,
           iconSize: [25, 41],
@@ -15,7 +15,7 @@ class Fungus extends React.Component {
         })}
       >
         <Popup>
-          Here lives the vibrant chandrasekhar
+          <p>Here lives the {this.props.fungus.name}</p>
         </Popup>
       </Marker>
     )

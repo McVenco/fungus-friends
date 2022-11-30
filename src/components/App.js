@@ -14,7 +14,6 @@ class App extends React.Component {
 
   loadFungi = () => {
     Promise.resolve(Mushroom()).then((values) => {
-      console.log('values: ', values);
       this.setState({ fungi: values })
     });
   }

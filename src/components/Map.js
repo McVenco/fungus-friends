@@ -7,7 +7,7 @@ class Map extends React.Component {
     return (
       <>
         <h2>Fungus Map</h2>
-        <MapContainer center={[52.08, 5.235]} zoom={16} >
+        <MapContainer center={[52.081, 5.236]} zoom={17} >
           <TileLayer
             attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

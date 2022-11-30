@@ -1,8 +1,23 @@
 import './css/App.css';
 import React from 'react';
 import Map from './components/Map';
+import Mushroom from './front-end-api.tsx';
 
 class App extends React.Component {
+  state = {
+    fungi: {}
+  }
+
+  componentDidMount() {
+    this.loadFungi();
+  }
+
+  loadFungi = () => {
+    Promise.resolve(Mushroom()).then((values) => {
+      console.log('values: ', values);
+      this.setState({ fungi: values })
+    });
+  }
 
   render () {
     return (

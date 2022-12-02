@@ -1,7 +1,7 @@
 import React from 'react';
 import '../css/App.css';
 import Map from './Map';
-import Mushroom from '../front-end-api.tsx';
+import Mushroom from '../front-end-api.ts';
 
 class App extends React.Component {
   state = {

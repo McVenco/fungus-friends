@@ -2,9 +2,14 @@ import React from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import { Icon } from 'leaflet';
+import { Color, Spots } from '../front-end-api.ts';
 
 class Fungus extends React.Component {
   render () {
+    // replace number value of color and spots to their actual string value
+    const color = Color[this.props.fungus.color];
+    const spots = Spots[this.props.fungus.spots];
+    
     return (
       <Marker
         position={this.props.fungus.latlng}
@@ -15,7 +20,7 @@ class Fungus extends React.Component {
         })}
       >
         <Popup>
-          <p>Here lives the {this.props.fungus.name}</p>
+          <p>Here lives the {spots} spotted {color} colored {this.props.fungus.name}</p>
         </Popup>
       </Marker>
     )

@@ -11,7 +11,7 @@ class Filter extends React.Component {
     function colorToArray(Color) {
       return Object.values(Color)
         .filter(filterNumber)
-        .map(key => Color[key])
+        .map(key => Color[key].toLowerCase())
     }
     function spotsToArray(Spots) {
       return Object.values(Spots)

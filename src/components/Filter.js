@@ -18,9 +18,16 @@ class Filter extends React.Component {
         .filter(filterNumber)
         .map(key => Spots[key])
     }
+    // some variables
+    const color = colorToArray(Color);
+    const spots = spotsToArray(Spots)
     // return string values to select options
-    const colorValues = Object.values(colorToArray(Color)).map(col => <option key={col}>{col}</option>)
-    const spotsValues = Object.values(spotsToArray(Spots)).map(spot => <option key={spot}>{spot}</option>)
+    const colorValues = Object.values(color).map(
+      col => <option value={col} key={col}>{col}</option>
+    )
+    const spotsValues = Object.values(spots).map(
+      spot => <option value={spot} key={spot}>{spot}</option>
+    )
 
     return (
       <>

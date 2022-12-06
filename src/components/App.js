@@ -1,17 +1,22 @@
 import React from 'react';
 import '../css/App.css';
+import Filter from './Filter';
 import Map from './Map';
 import Mushroom from '../front-end-api.ts';
 
 class App extends React.Component {
-  state = {
-    fungi: {}
+  constructor(props) {
+    super(props);
+    this.state = {
+      fungi: {}
+    }
   }
 
   componentDidMount() {
     this.loadFungi();
   }
 
+  // get fungi from data file and set them to state
   loadFungi = () => {
     Promise.resolve(Mushroom()).then((values) => {
       this.setState({ fungi: values })
@@ -26,7 +31,12 @@ class App extends React.Component {
             Fungus Friends! <img src="/images/logo_outline_64.png" alt="Fungus Friends logo" />
           </h1>
         </header>
-        <Map fungi={this.state.fungi} />
+        <div className="filter">
+          <Filter fungi={this.state.fungi} />
+        </div>
+        <div className="map">
+         <Map fungi={this.state.fungi} />
+        </div>
       </div>
     );
   }

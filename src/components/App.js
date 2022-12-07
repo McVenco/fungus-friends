@@ -30,9 +30,7 @@ class App extends React.Component {
   render () {
     return (
       <div className="App" style={{
-          backgroundImage: "url(/images/fungi-background.jpeg)",
-          height: '100vh',
-          width: '100vw',
+          backgroundImage: 'url(/images/fungi-background.jpeg)'
         }}>
         <div className="App-container">
           <header className="App-header">

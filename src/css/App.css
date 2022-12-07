@@ -2,6 +2,9 @@
 
 .App {
   text-align: center;
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
 }
 
 .App-container {
@@ -29,8 +32,7 @@
 }
 
 .App-left {
-  color: white;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.75);
   border-radius: 0 0 0 25px;
   grid-area: 2 / 1 / 3 / 2;
 }
@@ -50,6 +52,10 @@
   width: 100%;
   height: 100%;
   z-index: 1;
+}
+
+.leaflet-bottom.leaflet-right {
+  left: 0;
 }
 
 /* mobile version */

@@ -25,7 +25,18 @@ class Filter extends React.Component {
     } else {
       this.props.updateSpotsFilter(this.props.spotsFilter, {});
     }
+  }
 
+  removeColorFilter = () => {
+    const colorSelect = document.querySelector('select[name=colorfilter')
+    colorSelect.selectedIndex = 0;
+    this.props.updateColorFilter(this.props.colorFilter, {});
+  }
+
+  removeSpotsFilter = () => {
+    const spotsSelect = document.querySelector('select[name=spotsfilter')
+    spotsSelect.selectedIndex = 0;
+    this.props.updateSpotsFilter(this.props.spotsFilter, {});
   }
 
   render () {
@@ -60,20 +71,28 @@ class Filter extends React.Component {
     return (
       <>
         <h3>Filter fungi</h3>
-        <select
-          name="colorfilter"
-          onChange={this.setColorFilter}
+
+        <div className="filter-select">
+          <select
+            name="colorfilter"
+            onChange={this.setColorFilter}
+            >
+            <option value="default">- filter color -</option>
+            {colorValues}
+          </select>
+          <button className="clearfilter" onClick={this.removeColorFilter}>&times;</button>
+        </div>
+
+        <div className="filter-select">
+          <select
+          name="spotsfilter"
+          onChange={this.setSpotsFilter}
           >
-          <option value="default">- filter color -</option>
-          {colorValues}
-        </select>
-        <select
-         name="spotsfilter"
-         onChange={this.setSpotsFilter}
-        >
-          <option value="default">- filter spots -</option>
-          {spotsValues}
-        </select>
+            <option value="default">- filter spots -</option>
+            {spotsValues}
+          </select>
+          <button className="clearfilter" onClick={this.removeSpotsFilter}>&times;</button>
+        </div>
       </>
     )
   }

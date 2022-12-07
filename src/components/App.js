@@ -5,11 +5,9 @@ import Map from './Map';
 import Mushroom from '../front-end-api.ts';
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      fungi: {}
-    }
+  state = {
+    fungi: {},
+    filters: {}
   }
 
   componentDidMount() {
@@ -23,6 +21,12 @@ class App extends React.Component {
     });
   }
 
+  updateFilter = (key, updatedFilter) => {
+    const filters = {...this.state.filters};
+    filters[key] = updatedFilter;
+    this.setState({ filters: updatedFilter });
+  }
+
   render () {
     return (
       <div className="App">
@@ -32,7 +36,10 @@ class App extends React.Component {
           </h1>
         </header>
         <div className="filter">
-          <Filter fungi={this.state.fungi} />
+          <Filter
+            fungi={this.state.fungi}
+            updateFilter={this.updateFilter}
+          />
         </div>
         <div className="map">
          <Map fungi={this.state.fungi} />

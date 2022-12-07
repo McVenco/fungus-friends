@@ -7,7 +7,8 @@ import Mushroom from '../front-end-api.ts';
 class App extends React.Component {
   state = {
     fungi: {},
-    filters: {}
+    colorFilter: {},
+    spotsFilter: {}
   }
 
   componentDidMount() {
@@ -21,10 +22,16 @@ class App extends React.Component {
     });
   }
 
-  updateFilter = (key, updatedFilter) => {
-    const filters = {...this.state.filters};
+  updateColorFilter = (key, updatedFilter) => {
+    const filters = {...this.state.colorFilter};
     filters[key] = updatedFilter;
-    this.setState({ filters: updatedFilter });
+    this.setState({ colorFilter: updatedFilter });
+  }
+
+  updateSpotsFilter = (key, updatedFilter) => {
+    const filters = {...this.state.spotsFilter};
+    filters[key] = updatedFilter;
+    this.setState({ spotsFilter: updatedFilter });
   }
 
   render () {
@@ -41,7 +48,8 @@ class App extends React.Component {
           <div className="App-left">
             <Filter
               fungi={this.state.fungi}
-              updateFilter={this.updateFilter}
+              updateColorFilter={this.updateColorFilter}
+              updateSpotsFilter={this.updateSpotsFilter}
               />
           </div>
           <div className="App-right">

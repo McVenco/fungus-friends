@@ -5,25 +5,25 @@ class Filter extends React.Component {
   
   setColorFilter = (event) => {
     const colorFilter = {
-      ...this.props.filters,
+      ...this.props.colorFilter,
       [event.target.name]: event.target.value
     }
     if(event.target.value !== "default"){
-      this.props.updateFilter(this.props.filters, colorFilter);
+      this.props.updateColorFilter(this.props.colorFilter, colorFilter);
     } else {
-      this.props.updateFilter(this.props.filters, {});
+      this.props.updateColorFilter(this.props.colorFilter, {});
     }
   }
   
   setSpotsFilter = (event) => {
     const spotsFilter = {
-      ...this.props.filters,
+      ...this.props.spotsFilter,
       [event.target.name]: event.target.value
     }
     if(event.target.value !== "default"){
-      this.props.updateFilter(this.props.filters, spotsFilter);
+      this.props.updateSpotsFilter(this.props.spotsFilter, spotsFilter);
     } else {
-      this.props.updateFilter(this.props.filters, {});
+      this.props.updateSpotsFilter(this.props.spotsFilter, {});
     }
 
   }

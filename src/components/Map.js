@@ -1,11 +1,11 @@
 import React from "react";
 import { MapContainer, TileLayer } from 'react-leaflet';
-import Fungus from "./Fungus";
+import FungusMarker from "./FungusMarker";
 
 class Map extends React.Component {
   render () {
     const fungus = Object.keys(this.props.fungi).map(key => (
-      <Fungus key={key} fungus={this.props.fungi[key]}/>
+      <FungusMarker key={key} fungus={this.props.fungi[key]}/>
     ))
 
     return (

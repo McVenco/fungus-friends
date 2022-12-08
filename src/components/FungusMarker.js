@@ -4,7 +4,7 @@ import markerIconPng from "leaflet/dist/images/marker-icon.png";
 import { Icon } from 'leaflet';
 import { Color, Spots } from '../front-end-api.ts';
 
-class Fungus extends React.Component {
+class FungusMarker extends React.Component {
   render () {
     // replace number value of color and spots to their actual string value
     const color = Color[this.props.fungus.color];
@@ -31,4 +31,4 @@ class Fungus extends React.Component {
   }
 }
 
-export default Fungus;
+export default FungusMarker;

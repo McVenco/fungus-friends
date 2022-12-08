@@ -70,7 +70,9 @@ class Filter extends React.Component {
 
     return (
       <>
-        <h3>Filter fungi</h3>
+        <div className="filter-title">
+          Filter fungi
+        </div>
 
         <div className="filter-select">
           <select

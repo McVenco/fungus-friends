@@ -20,7 +20,11 @@ class Fungus extends React.Component {
         })}
       >
         <Popup>
-          <p>Here lives the {spots} spotted {color} colored {this.props.fungus.name}</p>
+          <div className="fungus-popup">
+            <p className="fungus-name"><span>{this.props.fungus.name}</span> lives here!</p>
+            <p className="fungus-color">Color: <span>{color.toLowerCase()}</span></p>
+            <p className="fungus-spots">Spots: <span>{spots}</span></p>
+          </div>
         </Popup>
       </Marker>
     )

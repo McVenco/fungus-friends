@@ -41,9 +41,8 @@ class App extends React.Component {
         }}>
         <div className="App-container">
           <header className="App-header">
-            <h1>
-              Fungus Friends! <img src="/images/logo_outline_64.png" alt="Fungus Friends logo" />
-            </h1>
+              Fungus Friends
+              <img src="/images/logo_outline_64.png" alt="Fungus Friends logo" />
           </header>
           <div className="App-left">
             <Filter

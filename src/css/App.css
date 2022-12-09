@@ -28,7 +28,16 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: 2em;
+  font-size: 3em;
+}
+
+.header-image {
+  position: absolute;
+  left: 40px;
+}
+
+.header-title {
+  text-align: center;
 }
 
 .App-left {
@@ -52,10 +61,14 @@
   margin-top: 10px;
 }
 
+.filter-select {
+  margin-top: 5px;
+}
+
 .filter-select select,
 .filter-select button {
   height: 25px;
-  margin: 10px 2px 0 2px;
+  margin: 2px 0;
 }
 
 .filter-select button {
@@ -104,6 +117,8 @@
   .App-header {
     grid-area: 1 / 1 / 2 / 3;
     border-radius: 0;
+    background-color: #222;
+    font-size: 2.5em;
   }
   .App-header img {
     display: none
@@ -116,6 +131,13 @@
     border-radius: 0;
     grid-area: 3 / 1 / 4 / 2;
     height: calc((100vh - 80px)*0.833); /* header=80px, grid 1:5 */
+  }
+  .filter-title {
+    margin-top: 0;
+  }
+  .filter-select select,
+  .filter-select button {
+    height: 20px;
   }
   .leaflet-bottom.leaflet-right {
     right: 0;

@@ -49,12 +49,13 @@
 
 .filter-title {
   font-size: 1.5em;
+  margin-top: 10px;
 }
 
 .filter-select select,
 .filter-select button {
   height: 25px;
-  margin: 2px 0;
+  margin: 10px 2px 0 2px;
 }
 
 .filter-select button {
